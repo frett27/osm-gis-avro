@@ -1,0 +1,12 @@
+{
+
+ "namespace": "org.osm.avro",
+ "type": "record",
+ "name": "ARelated",
+ "fields": [
+     {"name": "relatedId", "type": "long"},
+     {"name": "type", "type": "string"},
+     {"name": "role", "type": "string"}
+ ]
+}
+ 

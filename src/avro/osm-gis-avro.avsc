@@ -1,0 +1,100 @@
+[ {
+	"namespace" : "org.osm.avro",
+	"type" : "enum",
+	"name" : "OSMType",
+	"symbols" : [ "NODE", "WAY", "POLYGON", "RELATION" ]
+}, {
+	"namespace" : "org.osm.avro",
+	"type" : "record",
+	"name" : "AComplex",
+	"fields" : [ {
+		"name" : "id",
+		"type" : "long"
+	}, {
+		"name" : "geometry",
+		"type" : "bytes"
+	}, {
+		"name" : "fields",
+		"type" : [ "null", {
+			"type" : "map",
+			"values" : "string"
+		} ]
+	} ]
+}, {
+	"namespace" : "org.osm.avro",
+	"type" : "record",
+	"name" : "ANode",
+	"fields" : [ {
+		"name" : "id",
+		"type" : "long"
+	}, {
+		"name" : "x",
+		"type" : "double"
+	}, {
+		"name" : "y",
+		"type" : "double"
+	}, {
+		"name" : "fields",
+		"type" : [ "null", {
+			"type" : "map",
+			"values" : "string"
+		} ]
+	} ]
+}, {
+	"namespace" : "org.osm.avro",
+	"type" : "record",
+	"name" : "ARelated",
+	"fields" : [ {
+		"name" : "relatedId",
+		"type" : "long"
+	}, {
+		"name" : "type",
+		"type" : "string"
+	}, {
+		"name" : "role",
+		"type" : "string"
+	} ]
+}, {
+	"namespace" : "org.osm.avro",
+	"type" : "record",
+	"name" : "ARelation",
+	"fields" : [ {
+		"name" : "id",
+		"type" : "long"
+	}, {
+		"name" : "fields",
+		"type" : [ "null", {
+			"type" : "map",
+			"values" : "string"
+		} ]
+	}, {
+		"name" : "related",
+		"type" : [ "null", {
+			"type" : "array",
+			"items" : "ARelated"
+		} ]
+	} ]
+}, {
+	"namespace" : "org.osm.avro",
+	"type" : "record",
+	"name" : "OSMEntity",
+	"fields" : [ {
+		"name" : "osmtype",
+		"type" : "OSMType"
+	}, {
+		"name" : "id",
+		"type" : "long"
+	}, {
+		"name" : "node",
+		"type" : [ "null", "ANode" ]
+	}, {
+		"name" : "way",
+		"type" : [ "null", "AComplex" ]
+	}, {
+		"name" : "polygon",
+		"type" : [ "null", "AComplex" ]
+	}, {
+		"name" : "rel",
+		"type" : [ "null", "ARelation" ]
+	} ]
+} ]

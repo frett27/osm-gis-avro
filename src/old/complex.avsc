@@ -1,0 +1,12 @@
+{
+ "namespace": "org.osm.avro",
+ "type": "record",
+ "name": "AComplex",
+ "fields": [
+     {"name": "id", "type": "long"},
+     {"name": "geometry", "type": "bytes"},
+     {"name": "fields", "type": ["null",{ "type":"map", "values":"string"}]}
+     
+ ]
+}
+

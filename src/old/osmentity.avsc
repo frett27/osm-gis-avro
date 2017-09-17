@@ -1,0 +1,16 @@
+{
+
+
+ "namespace": "org.osm.avro",
+ "type": "record",
+ "name": "OSMEntity",
+ "fields": [
+ 	 {"name": "osmtype", "type":"OSMType"},
+     {"name": "id", "type": "long"},
+     {"name": "node", "type": ["null","ANode"]},
+     {"name": "way", "type": ["null","AComplex"]},
+     {"name": "polygon", "type": ["null","AComplex"]},
+     {"name": "rel", "type": ["null","ARelation"]}
+ ]
+}
+

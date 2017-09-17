@@ -1,0 +1,14 @@
+{
+
+ "namespace": "org.osm.avro",
+ "type": "record",
+ "name": "ANode",
+ "fields": [
+     {"name": "id", "type": "long"},
+     {"name": "x", "type": "double"},
+     {"name": "y", "type": "double"},
+     {"name": "fields", "type": ["null",{ "type":"map", "values":"string"}]}
+     
+ ]
+}
+

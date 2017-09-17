@@ -1,0 +1,13 @@
+{
+"namespace": "org.osm.avro",
+ "type": "record",
+ "name": "ARelation",
+ "fields": [
+     {"name": "id", "type": "long"},
+     {"name": "fields", "type": ["null",{ "type":"map", "values":"string"}]},
+     {"name": "related", "type": ["null",{ "type":"array","items":"ARelated" }]}
+     
+ ]
+}
+
+

@@ -1,0 +1,9 @@
+{
+
+ "namespace": "org.osm.avro",
+ "type": "enum",
+ "name": "OSMType",
+  "symbols":["NODE","WAY","POLYGON","RELATION"]
+  
+}
+
